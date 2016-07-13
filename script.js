@@ -6,6 +6,7 @@ $(document).ready(function() {
     var s = today.getSeconds();
     var ampm = amOrPm(h);
     getColor(m);
+    backgroundFive(m);
     h = convertHours(h);
     h = checkTime(h);
     m = checkTime(m);
@@ -38,10 +39,36 @@ $(document).ready(function() {
 
   function getColor(i) {
     if (i % 2 === 0 ) {
-        $("#txt").css({ color: "blue", fontSize: "25px" });
+        $("#txt").css({ color: "blue"});
     } else {
-        $("#txt").css({ color: "red", fontSize: "25px" });
+        $("#txt").css({ color: "red"});
     }
+  }
+
+  function backgroundFive(i) {
+  	if (i <= 5) {
+  		$("body").css({ "background-color": "yellow"}); 		
+  	} else if (i > 5 && i <= 10) {
+  		$("body").css({ "background-color": "orange"});
+  	} else if (i > 10 && i <= 15) {
+  		$("body").css({ "background-color": "yellow"});
+  	} else if (i > 15 && i <= 20) {
+  		$("body").css({ "background-color": "orange"});
+    } else if (i > 20 && i <= 25) {
+  		$("body").css({ "background-color": "yellow"});
+  	} else if (i > 25 && i <= 30) {
+  		$("body").css({ "background-color": "orange"});
+  	} else if (i > 30 && i <= 35) {
+  		$("body").css({ "background-color": "yellow"});
+  	} else if (i > 35 && i <= 40) {
+  		$("body").css({ "background-color": "orange"});
+   	} else if (i > 40 && i <= 45) {
+  		$("body").css({ "background-color": "yellow"});
+   	} else if (i > 45 && i <= 50) {
+  		$("body").css({ "background-color": "orange"});
+   	} else if (i > 50 && i <= 55) {
+  		$("body").css({ "background-color": "yellow"});
+  	}
   }
 
   startTime();
