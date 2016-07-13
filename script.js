@@ -6,8 +6,8 @@ $(document).ready(function() {
     var s = today.getSeconds();
     var ampm = amOrPm(h);
     getColor(m);
-    backgroundFive(s);
-    fontSize(s);
+    backgroundFive(m);
+    fontSize(h);
     h = convertHours(h);
     h = checkTime(h);
     m = checkTime(m);
@@ -59,9 +59,9 @@ $(document).ready(function() {
 //assignment 9 #3
   function fontSize(i) {
   	if (i % 2 ===0) {
-  		$("#txt").css({ fontSize: "20px"});
+  		$("#txt").css({ fontSize: "24px"});
   	} else {
-  	  	$("#txt").css({ fontSize: "30px"});
+  	  	$("#txt").css({ fontSize: "36px"});
   	}
 }
 
